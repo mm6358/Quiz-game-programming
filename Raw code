@@ -1,0 +1,214 @@
+//Mouleeswaran.J.M - RA2111009010139
+//Miruthula Valli.G - RA2111009010116
+
+
+#include<stdio.h>  
+#include<stdlib.h>  
+struct play 
+{  
+    char first_name[20];
+    char last_name[20];
+    int score;  
+    int rat;  
+}p;  
+void choice();
+void high_score();  
+void start();  
+void main()  
+{
+    printf("Hello User!!!");
+    printf("\nEnter your first Name: ");
+    scanf("%s",p.first_name);
+    printf("\nEnter your last name:");
+    scanf("%s",p.last_name);  
+    printf("\n **** Welcome \"%s %s\" to Quiz Game **** \n", p.first_name, p.last_name);
+    printf("\n ========================= QUIZ GAME INSTRUCTIONS ====================================");
+    printf("\n\n 1) There will be a total of 10 questions.");  
+    printf("\n 2) You will be given 4 options and you have to enter 1, 2 ,3 or 4 as your choice.");  
+    printf("\n 3) Each question will carry 5 points.");  
+    printf("\n 4) You will be asked questions continuously.");  
+    printf("\n 5) There is no negative marking for wrong answer.");
+    printf("\n 6) You cannot change your answer once you proceed to next question.");
+    printf("\n\n ================================= BEST OF LUCK ====================================== \n");
+    choice();
+}
+void choice()
+{
+    int chc=3;
+    printf("\n1. Start the game\n2. Quit the game  ");
+    printf("\n\nEnter your choice (1 or 2):  ");
+    scanf("%d",&chc);  
+    switch(chc)  
+    {  
+        case 2:
+            exit(1);
+            break;
+        case 1:  
+            start();  
+            break;  
+        default:  
+            printf("\nYour choice is Invalid. Try Again!!!\n");
+            choice();
+    }
+}
+void start()  
+{  
+    int ans;  
+    int count=0;  
+    char rating[20];  
+    printf("\n\nQn[1]. Who is the father of C language?\n1) Steve Jobs\n2) James Gosling\n3) Dennis Ritchie\n4) Rasmus Lerdorf\n\n");  
+    printf("Your Answer: ");  
+    scanf("%d",&ans);  
+    if(ans==3)  
+    {  
+        printf("Hurry!!! You are on the track!!!  +5 points.\n\n");  
+        ++count;  
+    }  
+    else  
+    {  
+        printf("Oops!!! Better Luck next time!!! Correct answer is Option 3) Dennis Ritchie.\n\n");  
+    }  
+    printf("Qn[2]. The c-preprocessors are specified with _ symbol.\n1) # \n2) $ \n3) %% \n4) &\n\n");  
+    printf("Your answer: ");  
+    scanf("%d",&ans);  
+    if(ans==1)  
+    {  
+        printf("Hurry!!! You are on the track!!! +5 points.\n\n");  
+        ++count;  
+    }  
+    else  
+    {  
+        printf("Oops!!! Better Luck next time!!! Correct answer is Option 1) #.\n\n");  
+    }  
+    printf("Qn[3]. scanf() is a predefined function in __ header file.  \n1) <stdlib.h>\n2) <ctype.h>\n3) <stdio.h>   \n4) <stdarg.h>\n\n");  
+    printf("Your answer: ");  
+    scanf("%d",&ans);  
+    if(ans==3)  
+    {  
+        printf("Hurry!!! You are on the track!!! +5 points.\n\n");  
+        ++count;  
+    }  
+    else  
+    {  
+        printf("Oops!!! Better Luck next time!!! Correct answer is Option 3) <stdio.h>.\n\n");  
+    }  
+    printf("Qn[4]. A C variable cannot start with ____ .\n1) A number\n2) A special symbol other than underscore\n3) Both (1) and (2)\n4) An alphabet\n\n");  
+    printf("Your answer: ");  
+    scanf("%d",&ans);  
+    if(ans==3)  
+    {  
+        printf("Hurry!!! You are on the track!!! +5 points.\n\n");  
+        ++count;  
+    }  
+    else  
+    {  
+        printf("Oops!!! Better Luck next time!!! Correct answer is Option 3) Both (1) and (2).\n\n");  
+    }  
+    printf("Qn[5]. Which one of the following is not a valid variable in C?\n1)_nature \n2)1nature\n3)nature1\n4)nature\n\n");  
+    printf("Your answer: ");  
+    scanf("%d",&ans);  
+    if(ans==2)  
+    {  
+        printf("Hurry!!! You are on the track!!! +5 points.\n\n");  
+        ++count;  
+    }  
+    else  
+    {  
+        printf("Oops!!! Better Luck next time!!! Correct answer is Option 2) 1nature.\n\n");  
+    }  
+    printf("Qn[6]. What is an Array in C language?\n1) A group of elements of same data type. \n2) An array contians more than one element.\n3) Array elements are stored in memory in continuous or contiguous locations\n4) All the above\n\n");  
+    printf("Your answer: ");  
+    scanf("%d",&ans);  
+    if(ans==4)  
+    {  
+        printf("Hurry!!! You are on the track!!! +5 points.\n\n");  
+        ++count;  
+    }  
+    else  
+    {  
+        printf("Oops!!! Better Luck next time!!! Correct answer is Option 4) All the above.\n\n");  
+    }  
+    printf("Qn[7]. An array index starts with? \n1) -1\n2) 0\n3) 1 \n4) 2\n\n");  
+    printf("Your answer: ");  
+    scanf("%d",&ans);  
+    if(ans==2)  
+    {  
+        printf("Hurry!!! You are on the track!!! +5 points.\n\n");  
+        ++count;  
+    }  
+    else  
+    {  
+        printf("Oops!!! Better Luck next time!!! Correct answer is Option 2) 0.\n\n");  
+    }  
+    printf("Qn[8].An entire array is always passed by __ to a called function.\n1) Call by value \n2) Call by reference\n3) Address relocation\n4) Address restructure\n\n");  
+    printf("Your answer: ");  
+    scanf("%d",&ans);  
+    if(ans==2)  
+    {  
+        printf("Hurry!!! You are on the track!!! +5 points.\n\n");  
+        ++count;  
+    }  
+    else  
+    {  
+        printf("Oops!!! Better Luck next time!!! Correct answer is Option 2) Call by reference.\n\n");  
+    }  
+    printf("Qn[9]. C was primarily developed as __ \n1) System Programming Language\n2) General Purpose Language\n3) Data Processing Language\n4) None of the above\n\n");  
+    printf("Your answer: ");  
+    scanf("%d",&ans);  
+    if(ans==1)  
+    {  
+        printf("Hurry!!! You are on the track!!! +5 points.\n\n");  
+        ++count;  
+    }  
+    else  
+    {  
+        printf("Oops!!! Better Luck next time!!! Correct answer is Option 1) System Programming Language.\n\n");  
+    }  
+    printf("Qn[10]. Which operator has least precedence \n1) Assignment Operator\n2) Logical Operator\n3) Conditional Operator\n4) Comma Operator\n\n");  
+    printf("Your answer: ");  
+    scanf("%d",&ans);  
+    if(ans==4)  
+    {  
+        printf("Hurry!!! You are on the track!!! +5 points.\n\n");  
+        ++count;  
+    }  
+    else  
+    {  
+        printf("Oops!!! Better Luck next time!!! Correct answer is Option 4) Comma Operator.\n\n");  
+    }
+    //counting number of correct answers and, ratings  
+    if(count > 0)  
+    {  
+        printf("\nThank you for attending the quiz game. \nCongratulations!!!\nYour have scored: %d points \t", count*5);  
+        p.score=count*5;  
+        if(p.score >= 40)  
+        {  
+            printf("Rating for your performance: * * * * *");  
+            p.rat=5;  
+        }  
+        else if(p.score >= 30 && p.score < 40)  
+        {  
+            printf("Rating for your performance: * * * *");  
+            p.rat=4;  
+        }  
+        else if(p.score >= 20 && p.score < 30)  
+        {  
+            printf("Rating for your performance: * * *");  
+            p.rat=3;  
+        }  
+        else if(p.score >= 10 && p.score < 20)  
+        {  
+            printf("Rating for your performance: * *");  
+            p.rat=2;  
+        }  
+        else if(p.score < 10)  
+        {  
+            printf("Rating for your performance: *");  
+            p.rat=1;  
+        }  
+    }  
+    else  
+    {  
+        printf("\nDo well next time!!!\n");  
+    }  
+}
